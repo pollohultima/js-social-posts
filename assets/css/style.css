@@ -1,0 +1,19 @@
+body {
+    background-color: #102f45;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 30px;
+}
+
+.avatar {
+    width: 70px;
+}
+
+.post_image {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}

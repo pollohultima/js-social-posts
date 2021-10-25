@@ -7,41 +7,41 @@ Un secondo array conterrà solo gli id dei posts a cui abbiamo dato like.
 const posts = [
     {
         id: 1,
-        content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas perferendis libero magni fugiat quasi, neque animi dolorem maiores ratione, officia pariatur enim similique commodi eaque dolore rem quibusdam voluptas? Dolor, ipsa voluptate. Voluptas ducimus blanditiis quisquam voluptates asperiores, tenetur commodi, eveniet magnam consequuntur aspernatur quas doloremque ex odio. Libero, ut.',
-        image: 'https://unsplash.it/300/300?image=',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores voluptate dicta itaque sed recusandae eos culpa. Quas aperiam sunt perspiciatis, provident possimus iure deleniti voluptas ab aliquam neque officia?',
+        image: 'https://unsplash.it/1200/800?image=',
         avatar: 'https://unsplash.it/300/300?image=',
         user: 'Gigi Caglio',
         likes: 0,
-        date: 0
+        date: 2
     },
 
     {
         id: 2,
-        content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas perferendis libero magni fugiat quasi, neque animi dolorem maiores ratione, officia pariatur enim similique commodi eaque dolore rem quibusdam voluptas? Dolor, ipsa voluptate. Voluptas ducimus blanditiis quisquam voluptates asperiores, tenetur commodi, eveniet magnam consequuntur aspernatur quas doloremque ex odio. Libero, ut.',
-        image: 'https://unsplash.it/300/300?image=',
-        avatar: 'https://unsplash.it/300/300?image=',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores voluptate dicta itaque sed recusandae eos culpa. Quas aperiam sunt perspiciatis, provident possimus iure deleniti voluptas ab aliquam neque officia?',
+        image: 'https://unsplash.it/1200/700?image=',
+        avatar: 'https://unsplash.it/400/400?image=',
         user: 'Mario Sucro',
         likes: 0,
-        date: 0
+        date: 4
     },
 
     {
         id: 3,
-        content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas perferendis libero magni fugiat quasi, neque animi dolorem maiores ratione, officia pariatur enim similique commodi eaque dolore rem quibusdam voluptas? Dolor, ipsa voluptate. Voluptas ducimus blanditiis quisquam voluptates asperiores, tenetur commodi, eveniet magnam consequuntur aspernatur quas doloremque ex odio. Libero, ut.',
-        image: 'https://unsplash.it/300/300?image=',
-        avatar: 'https://unsplash.it/300/300?image=',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores voluptate dicta itaque sed recusandae eos culpa. Quas aperiam sunt perspiciatis, provident possimus iure deleniti voluptas ab aliquam neque officia?',
+        image: 'https://unsplash.it/1200/800?image=',
+        avatar: 'https://unsplash.it/350/350?image=',
         user: 'Angelo Pappino',
         likes: 0,
-        date: 0
+        date: 6
     },
     {
         id: 4,
-        content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas perferendis libero magni fugiat quasi, neque animi dolorem maiores ratione, officia pariatur enim similique commodi eaque dolore rem quibusdam voluptas? Dolor, ipsa voluptate. Voluptas ducimus blanditiis quisquam voluptates asperiores, tenetur commodi, eveniet magnam consequuntur aspernatur quas doloremque ex odio. Libero, ut.',
-        image: 'https://unsplash.it/300/300?image=',
-        avatar: 'https://unsplash.it/300/300?image=',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores voluptate dicta itaque sed recusandae eos culpa. Quas aperiam sunt perspiciatis, provident possimus iure deleniti voluptas ab aliquam neque officia?',
+        image: 'https://unsplash.it/1920/1080?image=',
+        avatar: 'https://unsplash.it/320/320?image=',
         user: 'Diego Culino',
         likes: 0,
-        date: 0
+        date: 9
     },
 ]
 
@@ -52,24 +52,28 @@ for (let i = 0; i < posts.length; i++) {
 
     const element = `
     <div class="col-7">
-                        <div class="card">
-                            <div class="heading">
-                                <img class="avatar" src=${post.avatar} alt="">
-                                <h3 class="user">${post.user}</h3>
-                                <h6 class="date">${post.date}</h6>
+                        <div class="card m-4">
+                            <div class="heading d-flex m-4 align-items-center">
+                                <img class="avatar rounded-circle" src=${post.avatar} alt="">
+                                <div class = "tags mx-4">
+                                    <h5 class="user m-0">${post.user}</h5>
+                                    <p class="date m-0">${post.date} mesi fa</p>
+                                </div>
                             </div>
-                            <div class="hero_image">
+                            <div class="hero_image mx-4">
+                            <p class="caption fs-5">${post.content}</p>
                                 <img class="post_image" src=${post.image} alt="">
-                                <p class="caption">${post.content}</p>
                             </div>
-                            <div class="buttons">
-                                <button class="like"></button>
-                                <div class="like_counter">${post.likes}</div>
+                            <div class="buttons m-4 d-flex justify-content-around align-items-center fs-4">
+                                <button type="button" class="btn like fs-4"><i class="fas fa-thumbs-up"></i> Mi piace</button>
+                                <div class="like_counter">Piace a ${post.likes} persone</div>
                             </div>
                         </div>
                     </div>
     
     `
-    document.query
+    document.querySelector('.row').insertAdjacentHTML('beforeend', element)
 }
+
+
 
