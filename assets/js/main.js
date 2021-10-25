@@ -11,7 +11,7 @@ const posts = [
         image: 'https://unsplash.it/1200/800?image=',
         avatar: 'https://unsplash.it/300/300?image=',
         user: 'Gigi Caglio',
-        likes: 0,
+        likes: 80,
         date: 2
     },
 
@@ -21,17 +21,17 @@ const posts = [
         image: 'https://unsplash.it/1200/700?image=',
         avatar: 'https://unsplash.it/400/400?image=',
         user: 'Mario Sucro',
-        likes: 0,
+        likes: 120,
         date: 4
     },
 
     {
         id: 3,
         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores voluptate dicta itaque sed recusandae eos culpa. Quas aperiam sunt perspiciatis, provident possimus iure deleniti voluptas ab aliquam neque officia?',
-        image: 'https://unsplash.it/1200/800?image=',
+        image: 'https://unsplash.it/1400/960?image=',
         avatar: 'https://unsplash.it/350/350?image=',
         user: 'Angelo Pappino',
-        likes: 0,
+        likes: 40,
         date: 6
     },
     {
@@ -40,7 +40,7 @@ const posts = [
         image: 'https://unsplash.it/1920/1080?image=',
         avatar: 'https://unsplash.it/320/320?image=',
         user: 'Diego Culino',
-        likes: 0,
+        likes: 35,
         date: 9
     },
 ]
@@ -61,7 +61,7 @@ for (let i = 0; i < posts.length; i++) {
                                 </div>
                             </div>
                             <div class="hero_image mx-4">
-                            <p class="caption fs-5">${post.content}</p>
+                            <p class="caption fs-5 mb-4">${post.content}</p>
                                 <img class="post_image" src=${post.image} alt="">
                             </div>
                             <div class="buttons m-4 d-flex justify-content-around align-items-center fs-4">
